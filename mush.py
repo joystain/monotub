@@ -66,7 +66,7 @@ def timed_fan(relay, t1,t2):
 	for x,y in zip(t1,t2):
 		if now >= x and now <= y:
 			relay_on(relay)
-			time.sleep(90)
+			time.sleep(120)
 			relay_off(relay)
 	else:
 		pass
@@ -126,11 +126,11 @@ try:
 # save sensor data
 			time_box=datetime.now().strftime('%H:%M')
 			day=datetime.now().strftime('%m-%d-%Y')
-			sheets_data(day,time_box,hum,fahrenheit)
+			sheets_data(day,time_box,round(hum,1),round(fahrenheit,1))
             
 # fan check
 			timed_fan(relay3,fan_time1,fan_time2)
-			time.sleep(3)
+			time.sleep(sensor_delay)
 # catch sensor failures
 		else:
 			print("Sensor Failure")
