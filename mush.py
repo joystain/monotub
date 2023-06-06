@@ -5,7 +5,7 @@ import RPi.GPIO as GPIO
 import csv
 from datetime import datetime
 
-# libraries for sheets api
+# libraries for sheets
 
 import os.path
 
