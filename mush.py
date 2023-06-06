@@ -37,7 +37,7 @@ GPIO.output(relay1,False)
 # script delays
 
 fan_delay=5
-sensor_delay=5
+sensor_delay=18005
 set_temp=60
 fan_time1=['06:00','12:00','18:00','23:29']
 fan_time2=['06:31','12:31','18:31','24:00']
